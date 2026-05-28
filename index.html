@@ -41,7 +41,6 @@
             flex-direction: column;
         }
 
-        /* ── Top Bar ── */
         .top-bar {
             background: var(--surface);
             padding: 6px 8px;
@@ -52,7 +51,7 @@
         .top-row {
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: 5px;
             flex-wrap: wrap;
         }
         .logo {
@@ -78,39 +77,39 @@
         }
         .search-wrap {
             flex: 1;
-            min-width: 120px;
+            min-width: 110px;
             position: relative;
         }
         .search-input {
             width: 100%;
-            padding: 7px 30px 7px 12px;
+            padding: 7px 28px 7px 10px;
             border-radius: 20px;
             border: 1px solid rgba(255, 255, 255, 0.25);
             background: #1a1a2e;
             color: #fff;
-            font-size: 0.75rem;
+            font-size: 0.72rem;
             outline: none;
             font-family: inherit;
             transition: 0.2s;
         }
         .search-input:focus {
             border-color: var(--accent);
-            box-shadow: 0 0 12px rgba(0, 229, 255, 0.2);
+            box-shadow: 0 0 10px rgba(0, 229, 255, 0.2);
         }
         .search-input::placeholder {
             color: #777;
         }
         .search-clear {
             position: absolute;
-            right: 8px;
+            right: 6px;
             top: 50%;
             transform: translateY(-50%);
             background: none;
             border: none;
             color: #999;
             cursor: pointer;
-            font-size: 0.8rem;
-            padding: 2px 6px;
+            font-size: 0.7rem;
+            padding: 2px 5px;
             display: none;
         }
         .search-results {
@@ -121,7 +120,7 @@
             background: var(--surface);
             border-radius: 12px;
             margin-top: 4px;
-            max-height: 180px;
+            max-height: 170px;
             overflow-y: auto;
             z-index: 2000;
             display: none;
@@ -129,9 +128,9 @@
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
         }
         .search-result-item {
-            padding: 8px 12px;
+            padding: 8px 10px;
             cursor: pointer;
-            font-size: 0.7rem;
+            font-size: 0.68rem;
             color: #ddd;
             border-bottom: 1px solid rgba(255, 255, 255, 0.04);
             transition: 0.15s;
@@ -144,17 +143,17 @@
         .controls {
             display: flex;
             align-items: center;
-            gap: 5px;
+            gap: 4px;
             flex-wrap: wrap;
         }
         .lang-btn {
-            padding: 5px 9px;
+            padding: 5px 8px;
             border-radius: 14px;
             border: 1px solid rgba(255, 255, 255, 0.2);
             background: var(--surface2);
             color: #ccc;
             cursor: pointer;
-            font-size: 0.65rem;
+            font-size: 0.62rem;
             font-weight: 600;
             transition: 0.2s;
             white-space: nowrap;
@@ -172,7 +171,7 @@
             border: 1px solid rgba(255, 255, 255, 0.2);
             background: var(--surface2);
             color: #fff;
-            font-size: 0.65rem;
+            font-size: 0.62rem;
             font-weight: 600;
             cursor: pointer;
             outline: none;
@@ -205,17 +204,36 @@
                 box-shadow: 0 0 18px var(--success), 0 0 30px rgba(46, 213, 115, 0.5);
             }
         }
+        .gps-pulse {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--accent);
+            animation: gpsFlash 0.4s ease-out;
+            margin-right: 2px;
+            vertical-align: middle;
+        }
+        @keyframes gpsFlash {
+            0% {
+                transform: scale(2.5);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 0;
+            }
+        }
         .accuracy-badge {
-            font-size: 0.6rem;
-            padding: 3px 7px;
-            border-radius: 12px;
+            font-size: 0.58rem;
+            padding: 3px 6px;
+            border-radius: 10px;
             background: var(--surface2);
             color: var(--text2);
             font-weight: 600;
             white-space: nowrap;
         }
 
-        /* ── Map ── */
         #map {
             flex: 1;
             width: 100%;
@@ -242,7 +260,6 @@
             font-size: 0.7rem;
         }
 
-        /* Custom locate button */
         .locate-btn {
             background: var(--surface) !important;
             color: #fff !important;
@@ -251,7 +268,7 @@
             width: 30px;
             height: 30px;
             cursor: pointer;
-            font-size: 16px;
+            font-size: 15px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -275,7 +292,6 @@
             }
         }
 
-        /* ── Bottom Panel ── */
         .bottom-panel {
             background: var(--surface);
             border-top: 1px solid rgba(255, 255, 255, 0.06);
@@ -324,7 +340,6 @@
             display: block;
         }
 
-        /* Stats */
         .stats {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
@@ -365,6 +380,14 @@
             font-size: 0.5rem;
             color: #888;
         }
+        .gps-update-indicator {
+            text-align: center;
+            font-size: 0.58rem;
+            color: #00e5ff;
+            margin-top: 2px;
+            min-height: 16px;
+            transition: 0.3s;
+        }
         .btn-row {
             display: flex;
             gap: 6px;
@@ -373,7 +396,7 @@
         }
         .btn {
             flex: 1;
-            min-width: 50px;
+            min-width: 48px;
             padding: 10px 6px;
             border-radius: 24px;
             border: none;
@@ -423,7 +446,6 @@
             font-size: 0.9rem;
         }
 
-        /* ── Land tools ── */
         .sub-tab-row {
             display: flex;
             gap: 5px;
@@ -532,6 +554,9 @@
             transition: transform 0.3s ease;
             pointer-events: none;
         }
+        .vehicle-icon.flash {
+            filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.6)) drop-shadow(0 0 24px rgba(255, 255, 255, 0.9));
+        }
         .footprint-annotation {
             background: var(--surface);
             color: #fff;
@@ -553,14 +578,13 @@
                 font-size: 0.8rem;
             }
             .search-input {
-                font-size: 0.8rem;
+                font-size: 0.78rem;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- ── Top Bar ── -->
     <div class="top-bar" id="topBar">
         <div class="top-row">
             <div class="logo"><span class="paw">🐾</span><span data-lang="title">ফুটপ্রিন্ট ট্র্যাকার</span></div>
@@ -585,23 +609,20 @@
         </div>
     </div>
 
-    <!-- ── Map ── -->
     <div id="map"></div>
 
-    <!-- ── Bottom Panel ── -->
     <div class="bottom-panel" id="bottomPanel">
         <div class="tab-row">
             <button class="tab-btn active" data-tab="tracker">📍 ট্র্যাকার</button>
             <button class="tab-btn" data-tab="land">📐 জমির হিসাব</button>
         </div>
-
-        <!-- Tracker Panel -->
         <div class="panel-content active" id="trackerContent">
             <div class="stats">
                 <div class="stat-card"><div class="stat-value speed" id="speedVal">0.0</div><div class="stat-label" data-lang="speedLabel">⚡ গতি</div><div class="stat-sub" id="speedMph">0.0 mph</div></div>
                 <div class="stat-card"><div class="stat-value dist" id="distVal">0</div><div class="stat-label" data-lang="distLabel">📏 দূরত্ব</div><div class="stat-sub" id="distMiles">0.00 মাইল</div></div>
                 <div class="stat-card"><div class="stat-value time" id="timeVal">00:00</div><div class="stat-label" data-lang="timeLabel">⏱ সময়</div><div class="stat-sub" id="segmentInfo">পরবর্তী: --</div></div>
             </div>
+            <div class="gps-update-indicator" id="gpsIndicator">🛰️ GPS সিগন্যালের অপেক্ষায়...</div>
             <div class="btn-row">
                 <button class="btn btn-start" id="btnStart"><span class="icon">▶</span> <span data-lang="startBtn">শুরু</span></button>
                 <button class="btn btn-pause" id="btnPause" disabled><span class="icon">⏸</span> <span data-lang="pauseBtn">বিরতি</span></button>
@@ -611,7 +632,6 @@
             </div>
         </div>
 
-        <!-- Land Panel -->
         <div class="panel-content" id="landContent">
             <div class="sub-tab-row">
                 <button class="sub-tab active" data-land="conversion">🔄 রূপান্তর</button>
@@ -670,22 +690,23 @@
 
     <script>
         (function() {
-            // ──────────────────────────── LANGUAGE ────────────────────────────
+            // ────────── LANGUAGE ──────────
             const translations = {
                 bn: { title: 'ফুটপ্রিন্ট ট্র্যাকার', car: '🚗 গাড়ি', bike: '🏍 বাইক', walk: '🚶 হাঁটা', cycle: '🚲 সাইকেল',
                     speedLabel: '⚡ গতি (কিমি/ঘ)', distLabel: '📏 মোট দূরত্ব', timeLabel: '⏱ সময়', startBtn: 'শুরু',
                     pauseBtn: 'বিরতি', stopBtn: 'থামুন', segmentNext: 'পরবর্তী: --', segmentLast: 'শেষ:', ready: '🎯 প্রস্তুত',
-                    searching: '🔍 খোঁজা হচ্ছে...', stopped: '⏹ থামানো', reset: '🔄 রিসেট', error: '⚠️ ত্রুটি',
-                    startAnnotation: '📍 শুরু', meters: 'মি', km: 'কিমি', miles: 'মাইল', shareTitle: 'ফুটপ্রিন্ট রিপোর্ট',
-                    totalDist: 'মোট দূরত্ব', totalTime: 'মোট সময়', avgSpeed: 'গড় গতি', vehicle: 'যানবাহন',
-                    pointsRecorded: 'পয়েন্ট রেকর্ড', date: 'তারিখ', print: 'প্রিন্ট', close: 'বন্ধ' },
+                    searching: '🔍 খোঁজা হচ্ছে...', stopped: '⏹ থামানো', gpsWaiting: '🛰️ GPS সিগন্যালের অপেক্ষায়...',
+                    gpsActive: '✅ GPS সক্রিয় | আপডেট: ', gpsNoSignal: '⚠️ GPS সিগন্যাল নেই (১৫+ সেকেন্ড)',
+                    shareTitle: 'ফুটপ্রিন্ট রিপোর্ট', totalDist: 'মোট দূরত্ব', totalTime: 'মোট সময়', avgSpeed: 'গড় গতি',
+                    vehicle: 'যানবাহন', pointsRecorded: 'পয়েন্ট রেকর্ড', date: 'তারিখ', print: 'প্রিন্ট', close: 'বন্ধ' },
                 en: { title: 'Footprint Tracker', car: '🚗 Car', bike: '🏍 Bike', walk: '🚶 Walking', cycle: '🚲 Bicycle',
                     speedLabel: '⚡ Speed (km/h)', distLabel: '📏 Distance', timeLabel: '⏱ Time', startBtn: 'Start',
                     pauseBtn: 'Pause', stopBtn: 'Stop', segmentNext: 'Next: --', segmentLast: 'Last:', ready: '🎯 Ready',
-                    searching: '🔍 Searching...', stopped: '⏹ Stopped', reset: '🔄 Reset', error: '⚠️ Error',
-                    startAnnotation: '📍 Start', meters: 'm', km: 'km', miles: 'mi', shareTitle: 'Footprint Report',
-                    totalDist: 'Total Distance', totalTime: 'Total Time', avgSpeed: 'Avg Speed', vehicle: 'Vehicle',
-                    pointsRecorded: 'Points Recorded', date: 'Date', print: 'Print', close: 'Close' }
+                    searching: '🔍 Searching...', stopped: '⏹ Stopped', gpsWaiting: '🛰️ Waiting for GPS...',
+                    gpsActive: '✅ GPS Active | Updates: ', gpsNoSignal: '⚠️ No GPS Signal (15+ sec)',
+                    shareTitle: 'Footprint Report', totalDist: 'Total Distance', totalTime: 'Total Time',
+                    avgSpeed: 'Avg Speed', vehicle: 'Vehicle', pointsRecorded: 'Points Recorded', date: 'Date',
+                    print: 'Print', close: 'Close' }
             };
             let currentLang = 'bn';
             window.setLanguage = function(lang) {
@@ -702,13 +723,14 @@
                     if (translations[lang] && translations[lang][k]) opts[i].textContent = translations[lang][k];
                 }
                 updateUI();
+                updateGpsIndicator();
                 if (document.getElementById('landContent').classList.contains('active')) convertUnits();
             };
 
             function t(key) { return (translations[currentLang] && translations[currentLang][key]) ? translations[
                     currentLang][key] : key; }
 
-            // ──────────────────────────── STATE ────────────────────────────
+            // ────────── STATE ──────────
             const state = {
                 tracking: false,
                 paused: false,
@@ -723,14 +745,16 @@
                 vehicleType: 'car',
                 currentBearing: 0,
                 animFrame: null,
-                targetLatLng: null
+                targetLatLng: null,
+                gpsUpdateCount: 0,
+                lastGpsTimestamp: 0,
+                gpsWatchdogTimer: null,
             };
             let surveyPoints = [];
             let surveyActive = false;
             let surveyLine = null;
             let searchTimeout = null;
 
-            // ──────────────────────────── DOM ────────────────────────────
             const statusDot = document.getElementById('statusDot');
             const accuracyBadge = document.getElementById('accuracyBadge');
             const speedVal = document.getElementById('speedVal');
@@ -739,6 +763,7 @@
             const distMiles = document.getElementById('distMiles');
             const timeVal = document.getElementById('timeVal');
             const segmentInfo = document.getElementById('segmentInfo');
+            const gpsIndicator = document.getElementById('gpsIndicator');
             const btnStart = document.getElementById('btnStart');
             const btnPause = document.getElementById('btnPause');
             const btnStop = document.getElementById('btnStop');
@@ -747,14 +772,9 @@
             const searchResults = document.getElementById('searchResults');
             const searchClear = document.getElementById('searchClear');
 
-            // ──────────────────────────── MAP ────────────────────────────
-            const map = L.map('map', {
-                zoomControl: true,
-                attributionControl: false,
-                zoom: 7,
-                maxZoom: 22,
-                minZoom: 4
-            }).setView([23.6850, 90.3563], 7);
+            // ────────── MAP ──────────
+            const map = L.map('map', { zoomControl: true, attributionControl: false, zoom: 7, maxZoom: 22,
+                minZoom: 4 }).setView([23.6850, 90.3563], 7);
             const osmStandard = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 22,
                 maxNativeZoom: 19 });
             const esriSatellite = L.tileLayer(
@@ -774,17 +794,14 @@
             L.control.layers({ "🗺️ স্ট্রিট": osmStandard, "🌙 ডার্ক": cartoDark, "🛰️ স্যাটেলাইট": esriSatellite },
                 { "🏷️ লেবেল": cartoLabels }, { position: 'topright', collapsed: true }).addTo(map);
 
-            // Custom Locate Button (like Google Maps)
             const LocateControl = L.Control.extend({
                 options: { position: 'bottomright' },
                 onAdd: function() {
                     const btn = L.DomUtil.create('div', 'locate-btn');
                     btn.innerHTML = '◎';
                     btn.title = 'বর্তমান অবস্থানে যান';
-                    btn.onclick = function(e) {
-                        e.stopPropagation();
-                        goToCurrentLocation();
-                    };
+                    btn.onclick = function(e) { e.stopPropagation();
+                        goToCurrentLocation(); };
                     return btn;
                 }
             });
@@ -806,24 +823,21 @@
                             }).addTo(map);
                         }
                         currentMarker.setLatLng([latitude, longitude]);
-                    }, () => {
-                        if (btn) btn.classList.remove('locating');
-                        alert('অবস্থান পাওয়া যায়নি। GPS অন করুন।');
-                    }, { enableHighAccuracy: true, timeout: 10000 });
-                } else {
-                    if (btn) btn.classList.remove('locating');
-                    alert('Geolocation সমর্থিত নয়।');
-                }
+                        flashVehicleIcon();
+                    }, () => { if (btn) btn.classList.remove('locating');
+                        alert('অবস্থান পাওয়া যায়নি। GPS অন করুন।'); }, { enableHighAccuracy: true,
+                        timeout: 10000 });
+                } else { if (btn) btn.classList.remove('locating');
+                    alert('Geolocation সমর্থিত নয়।'); }
             }
 
-            // Custom pane
             map.createPane('footprints');
             map.getPane('footprints').style.zIndex = 500;
             map.getPane('footprints').style.pointerEvents = 'none';
             const pathLine = L.polyline([], { color: '#ff6ec7', weight: 4, opacity: 0.85, pane: 'footprints',
                 dashArray: '8 6' }).addTo(map);
             const glowLine = L.polyline([], { color: '#ff6ec7', weight: 10, opacity: 0.2, pane: 'footprints' }).addTo(
-            map);
+                map);
             const footprintMarkers = L.layerGroup().addTo(map);
             const annotationLayer = L.layerGroup().addTo(map);
             const surveyMarkers = L.layerGroup().addTo(map);
@@ -833,17 +847,26 @@
             function createVehicleIcon(type) {
                 return L.divIcon({
                     className: '',
-                    html: `<div class="vehicle-icon" style="font-size:30px;">${vehicleIcons[type]||'🚗'}</div>`,
+                    html: `<div class="vehicle-icon" id="vehicleIconEl" style="font-size:30px;">${vehicleIcons[type]||'🚗'}</div>`,
                     iconSize: [38, 38],
                     iconAnchor: [19, 19]
                 });
+            }
+
+            function flashVehicleIcon() {
+                const el = currentMarker && currentMarker.getElement();
+                if (el) {
+                    const vd = el.querySelector('.vehicle-icon');
+                    if (vd) { vd.classList.add('flash');
+                        setTimeout(() => vd.classList.remove('flash'), 300); }
+                }
             }
             window.changeVehicle = function() {
                 state.vehicleType = vehicleSelect.value;
                 if (currentMarker) currentMarker.setIcon(createVehicleIcon(state.vehicleType));
             };
 
-            // ──────────────────────────── SEARCH ────────────────────────────
+            // ────────── SEARCH ──────────
             window.handleSearchInput = function() {
                 const q = searchInput.value.trim();
                 searchClear.style.display = q ? 'block' : 'none';
@@ -856,21 +879,15 @@
                             )
                         .then(r => r.json())
                         .then(data => {
-                            if (data.length === 0) {
-                                searchResults.innerHTML =
-                                    '<div class="search-result-item" style="color:#888;">কোনো ফলাফল পাওয়া যায়নি</div>';
-                            } else {
-                                searchResults.innerHTML = data.map((d, i) =>
+                            searchResults.innerHTML = data.length === 0 ?
+                                '<div class="search-result-item" style="color:#888;">কোনো ফলাফল পাওয়া যায়নি</div>' :
+                                data.map(d =>
                                     `<div class="search-result-item" onclick="selectSearchResult(${d.lat},${d.lon},'${d.display_name.replace(/'/g,"\\'")}')">📍 ${d.display_name}</div>`
                                     ).join('');
-                            }
                             searchResults.style.display = 'block';
-                        })
-                        .catch(() => {
-                            searchResults.innerHTML =
-                                '<div class="search-result-item" style="color:#ff6b6b;">সার্চ ত্রুটি</div>';
-                            searchResults.style.display = 'block';
-                        });
+                        }).catch(() => { searchResults.innerHTML =
+                            '<div class="search-result-item" style="color:#ff6b6b;">সার্চ ত্রুটি</div>';
+                        searchResults.style.display = 'block'; });
                 }, 400);
             };
             window.selectSearchResult = function(lat, lon, name) {
@@ -886,158 +903,146 @@
                 searchResults.innerHTML = '';
                 searchClear.style.display = 'none';
             };
-            document.addEventListener('click', function(e) {
-                if (!e.target.closest('.search-wrap')) { searchResults.style.display = 'none'; }
-            });
+            document.addEventListener('click', function(e) { if (!e.target.closest('.search-wrap')) searchResults.style
+                    .display = 'none'; });
 
-            // ──────────────────────────── TRACKER HELPERS ────────────────────────────
-            function haversine(lat1, lo1, lat2, lo2) {
-                const R = 6371000;
+            // ────────── TRACKER HELPERS ──────────
+            function haversine(lat1, lo1, lat2, lo2) { const R = 6371000;
                 const dLat = (lat2 - lat1) * Math.PI / 180;
                 const dLo = (lo2 - lo1) * Math.PI / 180;
                 const a = Math.sin(dLat / 2) ** 2 + Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) * Math
-                    .sin(dLo / 2) ** 2;
-                return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-            }
+                    .sin(dLo / 2) ** 2; return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a)); }
 
-            function bearing(lat1, lo1, lat2, lo2) {
-                const dLo = (lo2 - lo1) * Math.PI / 180;
+            function bearing(lat1, lo1, lat2, lo2) { const dLo = (lo2 - lo1) * Math.PI / 180;
                 const y = Math.sin(dLo) * Math.cos(lat2 * Math.PI / 180);
                 const x = Math.cos(lat1 * Math.PI / 180) * Math.sin(lat2 * Math.PI / 180) - Math.sin(lat1 * Math.PI / 180) *
-                    Math.cos(lat2 * Math.PI / 180) * Math.cos(dLo);
-                return (Math.atan2(y, x) * 180 / Math.PI + 360) % 360;
-            }
+                    Math.cos(lat2 * Math.PI / 180) * Math.cos(dLo); return (Math.atan2(y, x) * 180 / Math.PI + 360) % 360; }
 
-            function formatDist(m) {
-                if (m < 1) return '0 ' + t('meters');
-                if (m < 1000) return Math.round(m) + ' ' + t('meters');
-                return (m / 1000).toFixed(2) + ' ' + t('km');
-            }
+            function formatDist(m) { if (m < 1) return '0 ' + t('meters'); if (m < 1000) return Math.round(m) + ' ' + t(
+                    'meters'); return (m / 1000).toFixed(2) + ' ' + t('km'); }
 
             function metersToMiles(m) { return m * 0.000621371; }
 
-            function formatTime(ms) {
-                const s = Math.floor(ms / 1000);
+            function formatTime(ms) { const s = Math.floor(ms / 1000);
                 const h = Math.floor(s / 3600);
                 const m = Math.floor((s % 3600) / 60);
-                const sec = s % 60;
-                if (h > 0) return `${h}:${String(m).padStart(2,'0')}:${String(sec).padStart(2,'0')}`;
-                return `${String(m).padStart(2,'0')}:${String(sec).padStart(2,'0')}`;
-            }
+                const sec = s % 60; if (h > 0) return `${h}:${String(m).padStart(2,'0')}:${String(sec).padStart(2,'0')}`; return `${String(m).padStart(2,'0')}:${String(sec).padStart(2,'0')}`; }
 
-            function getElapsed() {
-                if (!state.startTime) return 0;
-                if (state.paused && state.pauseStart) return state.elapsedBeforePause;
-                return state.elapsedBeforePause + (Date.now() - (state.pauseStart || state.startTime));
+            function getElapsed() { if (!state.startTime) return 0; if (state.paused && state.pauseStart) return state
+                    .elapsedBeforePause; return state.elapsedBeforePause + (Date.now() - (state.pauseStart || state
+                    .startTime)); }
+
+            function updateGpsIndicator() {
+                if (!state.lastGpsTimestamp) { gpsIndicator.textContent = t('gpsWaiting');
+                    gpsIndicator.style.color = '#888'; return; }
+                const ago = Math.floor((Date.now() - state.lastGpsTimestamp) / 1000);
+                if (ago > 15) { gpsIndicator.textContent = t('gpsNoSignal');
+                    gpsIndicator.style.color = '#ff4757'; } else { gpsIndicator.textContent = t('gpsActive') + state
+                        .gpsUpdateCount + ' | ' + ago + 's আগে';
+                    gpsIndicator.style.color = '#00e5ff'; }
             }
 
             function animateMarker(lat, lng, brng) { state.targetLatLng = [lat, lng];
                 state.currentBearing = brng; if (!state.animFrame) smoothStep(); }
 
-            function smoothStep() {
-                if (!currentMarker || !map.hasLayer(currentMarker) || !state.targetLatLng) { state.animFrame = null; return; }
-                const cur = currentMarker.getLatLng(),
-                    tgt = state.targetLatLng;
-                const dx = tgt[0] - cur.lat,
+            function smoothStep() { if (!currentMarker || !map.hasLayer(currentMarker) || !state.targetLatLng) { state
+                    .animFrame = null; return; } const cur = currentMarker.getLatLng(),
+                    tgt = state.targetLatLng; const dx = tgt[0] - cur.lat,
                     dy = tgt[1] - cur.lng,
-                    dist = Math.sqrt(dx * dx + dy * dy);
-                if (dist < 0.000001) { currentMarker.setLatLng(tgt);
-                    state.animFrame = null; return; }
-                const step = Math.min(dist, 0.0003),
+                    dist = Math.sqrt(dx * dx + dy * dy); if (dist < 0.000001) { currentMarker.setLatLng(tgt);
+                    state.animFrame = null; return; } const step = Math.min(dist, 0.0003),
                     ratio = step / dist;
-                currentMarker.setLatLng([cur.lat + dx * ratio, cur.lng + dy * ratio]);
-                const el = currentMarker.getElement();
-                if (el) { const vd = el.querySelector('.vehicle-icon'); if (vd) vd.style.transform =
+                currentMarker.setLatLng([cur.lat + dx * ratio, cur.lng + dy * ratio]); const el = currentMarker.getElement(); if (
+                    el) { const vd = el.querySelector('.vehicle-icon'); if (vd) vd.style.transform =
                         `rotate(${state.currentBearing}deg)`; }
-                state.animFrame = requestAnimationFrame(smoothStep);
-            }
+                state.animFrame = requestAnimationFrame(smoothStep); }
 
-            function updateUI() {
-                timeVal.textContent = formatTime(getElapsed());
-                if (state.lastPosition && state.lastPosition.speed != null && state.tracking && !state.paused) {
-                    const kmh = state.lastPosition.speed * 3.6;
+            function updateUI() { timeVal.textContent = formatTime(getElapsed()); if (state.lastPosition && state
+                    .lastPosition.speed != null && state.tracking && !state.paused) { const kmh = state.lastPosition.speed *
+                    3.6;
                     speedVal.textContent = kmh.toFixed(1);
-                    speedMph.textContent = (kmh * 0.621371).toFixed(1) + ' mph';
-                } else { speedVal.textContent = '0.0';
+                    speedMph.textContent = (kmh * 0.621371).toFixed(1) + ' mph'; } else { speedVal.textContent = '0.0';
                     speedMph.textContent = '0.0 mph'; }
                 distVal.textContent = formatDist(state.totalDistanceMeters);
                 distMiles.textContent = metersToMiles(state.totalDistanceMeters).toFixed(2) + ' ' + t('miles');
                 segmentInfo.textContent = state.segmentDistances.length ? t('segmentLast') + ' ' + formatDist(state
-                    .segmentDistances[state.segmentDistances.length - 1]) : t('segmentNext');
-                if (state.lastPosition && state.lastPosition.accuracy) {
-                    const a = state.lastPosition.accuracy;
+                    .segmentDistances[state.segmentDistances.length - 1]) : t('segmentNext'); if (state.lastPosition && state
+                    .lastPosition.accuracy) { const a = state.lastPosition.accuracy;
                     accuracyBadge.textContent = '🎯 ±' + Math.round(a) + 'm';
-                    accuracyBadge.style.color = a < 10 ? '#2ed573' : a < 25 ? '#ffa502' : '#ff4757';
-                }
-            }
+                    accuracyBadge.style.color = a < 10 ? '#2ed573' : a < 25 ? '#ffa502' : '#ff4757'; }
+                updateGpsIndicator(); }
 
-            function addFootprint(lat, lng, label) {
-                const ic = L.divIcon({
-                    className: '',
+            function addFootprint(lat, lng, label) { const ic = L.divIcon({ className: '',
                     html: '<div style="width:6px;height:6px;background:#ff6ec7;border-radius:50%;box-shadow:0 0 7px #ff6ec7;border:1px solid #fff;"></div>',
-                    iconSize: [6, 6],
-                    iconAnchor: [3, 3]
-                });
-                L.marker([lat, lng], { icon: ic, pane: 'footprints', interactive: false }).addTo(footprintMarkers);
-                if (label) {
-                    const aic = L.divIcon({
-                        className: 'footprint-annotation',
-                        html: label,
-                        iconSize: null,
-                        iconAnchor: [22, 8]
-                    });
-                    const m = L.marker([lat, lng], { icon: aic, interactive: false, pane: 'footprints' }).addTo(
-                        annotationLayer);
-                    setTimeout(() => annotationLayer.removeLayer(m), 8000);
-                }
-            }
+                    iconSize: [6, 6], iconAnchor: [3, 3] });
+                L.marker([lat, lng], { icon: ic, pane: 'footprints', interactive: false }).addTo(footprintMarkers); if (
+                    label) { const aic = L.divIcon({ className: 'footprint-annotation', html: label, iconSize: null,
+                        iconAnchor: [22, 8] }); const m = L.marker([lat, lng], { icon: aic, interactive: false,
+                        pane: 'footprints' }).addTo(annotationLayer);
+                    setTimeout(() => annotationLayer.removeLayer(m), 8000); } }
 
-            function addPosition(lat, lng, acc, spd) {
-                const pos = { lat, lng, timestamp: Date.now(), accuracy: acc, speed: spd };
+            function addPosition(lat, lng, acc, spd) { const pos = { lat, lng, timestamp: Date.now(), accuracy: acc,
+                    speed: spd };
                 state.positions.push(pos);
-                if (state.lastPosition && state.tracking && !state.paused) {
-                    const seg = haversine(state.lastPosition.lat, state.lastPosition.lng, lat, lng);
-                    if (seg > 0.3) { state.totalDistanceMeters += seg;
+                state.gpsUpdateCount++;
+                state.lastGpsTimestamp = Date.now();
+                flashVehicleIcon();
+                resetGpsWatchdog(); if (state.lastPosition && state.tracking && !state.paused) { const seg = haversine(state
+                        .lastPosition.lat, state.lastPosition.lng, lat, lng); if (seg > 0.2) { state
+                        .totalDistanceMeters += seg;
                         state.segmentDistances.push(seg);
                         addFootprint(lat, lng, state.segmentDistances.length === 1 ? t('startAnnotation') : formatDist(
-                            seg)); }
-                } else if (state.positions.length === 1) addFootprint(lat, lng, t('startAnnotation'));
-                let brng = state.currentBearing;
-                if (state.lastPosition) brng = bearing(state.lastPosition.lat, state.lastPosition.lng, lat, lng);
+                            seg)); } } else if (state.positions.length === 1) addFootprint(lat, lng, t('startAnnotation')); let
+                    brng = state.currentBearing; if (state.lastPosition) brng = bearing(state.lastPosition.lat, state
+                        .lastPosition.lng, lat, lng);
                 state.lastPosition = pos;
                 pathLine.setLatLngs(state.positions.map(p => [p.lat, p.lng]));
-                glowLine.setLatLngs(state.positions.map(p => [p.lat, p.lng]));
-                if (!currentMarker) { currentMarker = L.marker([lat, lng], { icon: createVehicleIcon(state.vehicleType),
-                        zIndexOffset: 1000, interactive: false }).addTo(map); }
-                animateMarker(lat, lng, brng);
-                if (state.tracking && !state.paused) map.panTo([lat, lng], { animate: true, duration: 0.5 });
-                updateUI();
-            }
+                glowLine.setLatLngs(state.positions.map(p => [p.lat, p.lng])); if (!currentMarker) { currentMarker = L.marker(
+                    [lat, lng], { icon: createVehicleIcon(state.vehicleType), zIndexOffset: 1000,
+                    interactive: false }).addTo(map); }
+                animateMarker(lat, lng, brng); if (state.tracking && !state.paused) map.panTo([lat, lng], { animate: true,
+                    duration: 0.5 });
+                updateUI(); }
 
-            function startWatching() {
-                if (!navigator.geolocation) return;
-                state.watchId = navigator.geolocation.watchPosition(pos => {
-                    const { latitude, longitude, accuracy, speed } = pos.coords;
-                    if (state.tracking && !state.paused) addPosition(latitude, longitude, accuracy, speed);
-                    else if (!state.tracking && state.positions.length === 0) {
-                        state.lastPosition = { lat: latitude, lng: longitude, accuracy, speed, timestamp: Date
-                                .now() };
-                        if (!currentMarker) { currentMarker = L.marker([latitude, longitude], { icon: createVehicleIcon(
-                                    state.vehicleType), zIndexOffset: 1000, interactive: false }).addTo(
-                                map); }
-                        currentMarker.setLatLng([latitude, longitude]);
-                        map.setView([latitude, longitude], 16);
-                        accuracyBadge.textContent = '🎯 ±' + Math.round(accuracy) + 'm';
-                        updateUI();
-                    }
-                }, err => { accuracyBadge.textContent = t('error');
-                    accuracyBadge.style.color = '#ff4757'; }, { enableHighAccuracy: true, timeout: 20000,
-                    maximumAge: 300 });
-            }
+            function resetGpsWatchdog() { if (state.gpsWatchdogTimer) clearTimeout(state.gpsWatchdogTimer);
+                state.gpsWatchdogTimer = setTimeout(() => { if (Date.now() - state.lastGpsTimestamp > 15000) {
+                        updateGpsIndicator();
+                        restartGpsWatch(); } }, 16000); }
 
-            // ──────────────────────────── TRACKER BUTTONS ────────────────────────────
-            function resumeTracking() {
-                if (!state.tracking || !state.paused) return;
+            function restartGpsWatch() { if (state.watchId !== null) { navigator.geolocation.clearWatch(state
+                        .watchId);
+                    state.watchId = null; }
+                startWatching(); }
+
+            function startWatching() { if (!navigator.geolocation) return; if (state.watchId !== null) { navigator
+                    .geolocation.clearWatch(state.watchId);
+                    state.watchId = null; }
+                state.watchId = navigator.geolocation.watchPosition(pos => { const { latitude, longitude, accuracy,
+                        speed } = pos.coords; if (state.tracking && !state.paused) addPosition(latitude, longitude,
+                        accuracy, speed); else if (!state.tracking && state.positions.length === 0) { state
+                        .lastPosition = { lat: latitude, lng: longitude, accuracy, speed, timestamp: Date.now() };
+                    state.lastGpsTimestamp = Date.now();
+                    state.gpsUpdateCount++; if (!currentMarker) { currentMarker = L.marker([latitude, longitude], { icon:
+                            createVehicleIcon(state.vehicleType), zIndexOffset: 1000,
+                        interactive: false }).addTo(map); }
+                    currentMarker.setLatLng([latitude, longitude]);
+                    map.setView([latitude, longitude], 16);
+                    flashVehicleIcon();
+                    accuracyBadge.textContent = '🎯 ±' + Math.round(accuracy) + 'm';
+                    updateGpsIndicator();
+                    updateUI(); } else if (!state.tracking && state.lastPosition) { state.lastPosition = { lat: latitude,
+                        lng: longitude, accuracy, speed, timestamp: Date.now() };
+                    state.lastGpsTimestamp = Date.now();
+                    state.gpsUpdateCount++; if (currentMarker) currentMarker.setLatLng([latitude, longitude]);
+                    flashVehicleIcon();
+                    accuracyBadge.textContent = '🎯 ±' + Math.round(accuracy) + 'm';
+                    updateGpsIndicator(); }
+                resetGpsWatchdog(); }, err => { accuracyBadge.textContent = t('error');
+                    accuracyBadge.style.color = '#ff4757';
+                    updateGpsIndicator(); }, { enableHighAccuracy: true, timeout: 25000, maximumAge: 0 }); }
+
+            // ────────── TRACKER BUTTONS ──────────
+            function resumeTracking() { if (!state.tracking || !state.paused) return;
                 state.paused = false;
                 state.pauseStart = null;
                 statusDot.classList.add('active');
@@ -1046,11 +1051,10 @@
                 document.querySelector('#btnPause span:last-child').textContent = currentLang === 'bn' ? '⏸ বিরতি' :
                     '⏸ Pause';
                 btnStart.disabled = true;
-                updateUI();
-            }
+                restartGpsWatch();
+                updateUI(); }
 
-            function pauseTracking() {
-                if (!state.tracking || state.paused) return;
+            function pauseTracking() { if (!state.tracking || state.paused) return;
                 state.paused = true;
                 state.pauseStart = Date.now();
                 state.elapsedBeforePause = getElapsed();
@@ -1062,11 +1066,8 @@
                 btnStart.disabled = true;
                 speedVal.textContent = '0.0';
                 speedMph.textContent = '0.0 mph';
-                updateUI();
-            }
-            const startTracking = function() {
-                if (state.tracking && !state.paused) return;
-                if (state.paused) { resumeTracking(); return; }
+                updateUI(); }
+            const startTracking = function() { if (state.tracking && !state.paused) return; if (state.paused) { resumeTracking(); return; }
                 state.tracking = true;
                 state.paused = false;
                 state.startTime = Date.now();
@@ -1075,6 +1076,8 @@
                 state.positions = [];
                 state.segmentDistances = [];
                 state.lastPosition = null;
+                state.gpsUpdateCount = 0;
+                state.lastGpsTimestamp = 0;
                 footprintMarkers.clearLayers();
                 annotationLayer.clearLayers();
                 pathLine.setLatLngs([]);
@@ -1087,14 +1090,14 @@
                     'Running');
                 accuracyBadge.textContent = t('searching');
                 accuracyBadge.style.color = '#ffa502';
-                if (!state.watchId) startWatching();
-                updateUI();
-            };
+                gpsIndicator.textContent = t('gpsWaiting');
+                gpsIndicator.style.color = '#ffa502';
+                restartGpsWatch();
+                updateUI(); };
             const togglePause = () => state.paused ? resumeTracking() : pauseTracking();
-            const stopTracking = function() {
-                if (!state.tracking) return;
+            const stopTracking = function() { if (!state.tracking) return;
                 state.tracking = false;
-                state.paused = false;
+                state.paused = false; if (state.gpsWatchdogTimer) clearTimeout(state.gpsWatchdogTimer);
                 statusDot.classList.remove('active');
                 statusDot.style.background = '#ff4757';
                 statusDot.style.boxShadow = '0 0 6px #ff4757';
@@ -1107,12 +1110,10 @@
                 speedMph.textContent = '0.0 mph';
                 accuracyBadge.textContent = t('stopped');
                 accuracyBadge.style.color = '#ff4757';
-                updateUI();
-            };
-            const resetAll = function() {
-                if (state.watchId) { navigator.geolocation.clearWatch(state.watchId);
-                    state.watchId = null; }
-                if (state.animFrame) cancelAnimationFrame(state.animFrame);
+                updateUI(); };
+            const resetAll = function() { if (state.watchId) { navigator.geolocation.clearWatch(state.watchId);
+                    state.watchId = null; } if (state.gpsWatchdogTimer) clearTimeout(state.gpsWatchdogTimer); if (state
+                    .animFrame) cancelAnimationFrame(state.animFrame);
                 state.tracking = false;
                 state.paused = false;
                 state.positions = [];
@@ -1123,11 +1124,12 @@
                 state.segmentDistances = [];
                 state.animFrame = null;
                 state.targetLatLng = null;
+                state.gpsUpdateCount = 0;
+                state.lastGpsTimestamp = 0;
                 footprintMarkers.clearLayers();
                 annotationLayer.clearLayers();
                 pathLine.setLatLngs([]);
-                glowLine.setLatLngs([]);
-                if (currentMarker) { map.removeLayer(currentMarker);
+                glowLine.setLatLngs([]); if (currentMarker) { map.removeLayer(currentMarker);
                     currentMarker = null; }
                 statusDot.classList.remove('active');
                 statusDot.style.background = '#ff4757';
@@ -1145,12 +1147,12 @@
                 segmentInfo.textContent = t('segmentNext');
                 accuracyBadge.textContent = t('ready');
                 accuracyBadge.style.color = '#a0a0b8';
+                gpsIndicator.textContent = t('gpsWaiting');
+                gpsIndicator.style.color = '#888';
                 map.setView([23.6850, 90.3563], 7);
                 startWatching();
-                updateUI();
-            };
+                updateUI(); };
 
-            // Bind button events
             btnStart.addEventListener('click', startTracking);
             btnPause.addEventListener('click', togglePause);
             btnStop.addEventListener('click', stopTracking);
@@ -1160,122 +1162,40 @@
             window.stopTracking = stopTracking;
             window.resetAll = resetAll;
 
-            // ──────────────────────────── SHARE / PRINT ────────────────────────────
-            window.sharePrintReport = function() {
-                const posCount = state.positions.length;
-                if (posCount === 0 && state.totalDistanceMeters === 0) {
-                    alert('প্রথমে ট্র্যাকিং শুরু করুন এবং কিছু দূরত্ব অতিক্রম করুন।');
-                    return;
-                }
-                const totalDist = formatDist(state.totalDistanceMeters);
-                const totalDistMi = metersToMiles(state.totalDistanceMeters).toFixed(2);
-                const elapsed = state.tracking ? getElapsed() : (state.elapsedBeforePause || 0);
-                const totalTime = formatTime(elapsed);
-                const avgSpeed = elapsed > 0 ? ((state.totalDistanceMeters / elapsed) * 3.6).toFixed(1) : '0.0';
-                const lastPos = state.lastPosition;
-                const centerLat = lastPos ? lastPos.lat : 23.6850;
-                const centerLng = lastPos ? lastPos.lng : 90.3563;
-                const vehicleName = vehicleIcons[state.vehicleType] || '🚗';
-                const now = new Date().toLocaleString('bn-BD');
-
+            // ────────── SHARE ──────────
+            window.sharePrintReport = function() { const posCount = state.positions.length; if (posCount === 0 && state
+                    .totalDistanceMeters === 0) { alert('প্রথমে ট্র্যাকিং শুরু করুন এবং কিছু দূরত্ব অতিক্রম করুন。'); return; } const
+                    totalDist = formatDist(state.totalDistanceMeters); const totalDistMi = metersToMiles(state
+                        .totalDistanceMeters).toFixed(2); const elapsed = state.tracking ? getElapsed() : (state
+                        .elapsedBeforePause || 0); const totalTime = formatTime(elapsed); const avgSpeed = elapsed > 0 ? ((
+                        state.totalDistanceMeters / elapsed) * 3.6).toFixed(1) : '0.0'; const lastPos = state.lastPosition; const
+                    vehicleName = vehicleIcons[state.vehicleType] || '🚗'; const now = new Date().toLocaleString('bn-BD');
                 const reportHTML = `
-            <!DOCTYPE html><html lang="bn"><head><meta charset="UTF-8"><title>${t('shareTitle')}</title>
-            <style>
-              body{font-family:'Segoe UI','Noto Sans Bengali',sans-serif;background:#0a0a14;color:#e8e8f0;padding:20px;max-width:700px;margin:0 auto;}
-              h1{text-align:center;color:#ff6ec7;font-size:1.3rem;margin-bottom:4px;}
-              .sub{text-align:center;color:#888;font-size:0.7rem;margin-bottom:16px;}
-              .card{background:#1e1e36;border-radius:14px;padding:14px;margin:8px 0;border:1px solid rgba(255,255,255,0.06);}
-              .row{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid rgba(255,255,255,0.05);}
-              .val{font-weight:700;color:#00e5ff;}
-              .coords{max-height:200px;overflow-y:auto;font-size:0.65rem;color:#aaa;}
-              .btn-print{display:block;margin:20px auto;padding:12px 28px;border-radius:24px;border:none;background:#2ed573;color:#000;font-weight:700;cursor:pointer;font-size:1rem;font-family:inherit;}
-              @media print{body{background:#fff;color:#000;}.card{background:#f5f5f5;border:1px solid #ddd;}.val{color:#e91e63;}.btn-print{display:none;}.coords{color:#555;}}
-</style></head><body>
-    <h1>🐾 ${t('shareTitle')}</h1>
-    <div class="sub">${now}</div>
-    <div class="card">
-        <div class="row"><span>📏 ${t('totalDist')}</span><span class="val">${totalDist} (${totalDistMi} ${t('miles')})</span></div>
-        <div class="row"><span>⏱ ${t('totalTime')}</span><span class="val">${totalTime}</span></div>
-        <div class="row"><span>⚡ ${t('avgSpeed')}</span><span class="val">${avgSpeed} km/h</span></div>
-        <div class="row"><span>🚗 ${t('vehicle')}</span><span class="val">${vehicleName}</span></div>
-        <div class="row"><span>📍 ${t('pointsRecorded')}</span><span class="val">${posCount}</span></div>
-        ${lastPos?`<div class="row"><span>🎯 শেষ অবস্থান</span><span class="val">${lastPos.lat.toFixed(5)}, ${lastPos.lng.toFixed(5)}</span></div>`:''}
-    </div>
-    <div class="card">
-        <p style="font-weight:700;margin-bottom:6px;">📍 স্থানাঙ্ক তালিকা:</p>
-        <div class="coords">${state.positions.map((p,i)=>`${i+1}. ${p.lat.toFixed(5)}, ${p.lng.toFixed(5)}`).join('<br>')||'কোনো ডেটা নেই'}</div>
-    </div>
-    <p style="text-align:center;font-size:0.6rem;color:#666;">🐾 ফুটপ্রিন্ট ট্র্যাকার প্রো | বাংলাদেশ</p>
-    <button class="btn-print" onclick="window.print()">🖨️ ${t('print')} / PDF</button>
-</body></html>`;
-const w = window.open('', '_blank', 'width=700,height=600');
-if(w){w.document.write(reportHTML);w.document.close();}else{alert('পপ-আপ ব্লকড। দয়া করে পপ-আপ অনুমতি দিন।');}
-};
+<!DOCTYPE html><html lang="bn"><head><meta charset="UTF-8"><title>${t('shareTitle')}</title>
+<style>body{font-family:'Segoe UI','Noto Sans Bengali',sans-serif;background:#0a0a14;color:#e8e8f0;padding:20px;max-width:700px;margin:0 auto;}h1{text-align:center;color:#ff6ec7;font-size:1.3rem;margin-bottom:4px;}.sub{text-align:center;color:#888;font-size:0.7rem;margin-bottom:16px;}.card{background:#1e1e36;border-radius:14px;padding:14px;margin:8px 0;border:1px solid rgba(255,255,255,0.06);}.row{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid rgba(255,255,255,0.05);}.val{font-weight:700;color:#00e5ff;}.coords{max-height:200px;overflow-y:auto;font-size:0.65rem;color:#aaa;}.btn-print{display:block;margin:20px auto;padding:12px 28px;border-radius:24px;border:none;background:#2ed573;color:#000;font-weight:700;cursor:pointer;font-size:1rem;font-family:inherit;}@media print{body{background:#fff;color:#000;}.card{background:#f5f5f5;border:1px solid #ddd;}.val{color:#e91e63;}.btn-print{display:none;}.coords{color:#555;}}</style></head><body>
+<h1>🐾 ${t('shareTitle')}</h1><div class="sub">${now}</div>
+<div class="card"><div class="row"><span>📏 ${t('totalDist')}</span><span class="val">${totalDist} (${totalDistMi} ${t('miles')})</span></div><div class="row"><span>⏱ ${t('totalTime')}</span><span class="val">${totalTime}</span></div><div class="row"><span>⚡ ${t('avgSpeed')}</span><span class="val">${avgSpeed} km/h</span></div><div class="row"><span>🚗 ${t('vehicle')}</span><span class="val">${vehicleName}</span></div><div class="row"><span>📍 ${t('pointsRecorded')}</span><span class="val">${posCount}</span></div>${lastPos?`<div class="row"><span>🎯 শেষ অবস্থান</span><span class="val">${lastPos.lat.toFixed(5)}, ${lastPos.lng.toFixed(5)}</span></div>`:''}</div>
+<div class="card"><p style="font-weight:700;margin-bottom:6px;">📍 স্থানাঙ্ক তালিকা:</p><div class="coords">${state.positions.map((p,i)=>`${i+1}. ${p.lat.toFixed(5)}, ${p.lng.toFixed(5)}`).join('<br>')||'কোনো ডেটা নেই'}</div></div>
+<p style="text-align:center;font-size:0.6rem;color:#666;">🐾 ফুটপ্রিন্ট ট্র্যাকার প্রো | বাংলাদেশ</p>
+<button class="btn-print" onclick="window.print()">🖨️ ${t('print')} / PDF</button></body></html>`;
+const w=window.open('','_blank','width=700,height=600');if(w){w.document.write(reportHTML);w.document.close();}else{alert('পপ-আপ ব্লকড। দয়া করে পপ-আপ অনুমতি দিন।');}};
 
-// ──────────────────────────── LAND TOOLS ────────────────────────────
+// ────────── LAND TOOLS ──────────
 const unitToSqFt={katha:720,bigha:14400,decimal:435.6,kani:17280,gonda:864,kora:43.2,sqft:1,sqm:10.7639,acre:43560};
 const unitNames={katha:'কাঠা',bigha:'বিঘা',decimal:'শতাংশ',kani:'কানি',gonda:'গণ্ডা',kora:'কড়া',sqft:'বর্গফুট',sqm:'বর্গমিটার',acre:'একর'};
-
-window.convertUnits=function(){
-const val=parseFloat(document.getElementById('convValue').value)||0;
-const unit=document.getElementById('convUnit').value;
-const sqft=val*unitToSqFt[unit];
-let html='';
-for(const[u,factor]of Object.entries(unitToSqFt)){
-const converted=sqft/factor;
-html+=`<div class="result-item"><span>${unitNames[u]}</span><span style="color:#fff!important;">${converted.toFixed(4)}</span></div>`;
-}
-document.getElementById('convResults').innerHTML=html;
-};
-function switchMainTab(tab){
-document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
-document.querySelectorAll('.panel-content').forEach(p=>p.classList.remove('active'));
-if(tab==='tracker'){
-document.querySelector('.tab-btn[data-tab="tracker"]').classList.add('active');
-document.getElementById('trackerContent').classList.add('active');
-}else{
-document.querySelector('.tab-btn[data-tab="land"]').classList.add('active');
-document.getElementById('landContent').classList.add('active');
-convertUnits();
-}
-}
-function switchLandTab(tab){
-document.querySelectorAll('.sub-tab').forEach(b=>b.classList.remove('active'));
-document.getElementById('landConversion').style.display='none';
-document.getElementById('landArea').style.display='none';
-document.getElementById('landPrice').style.display='none';
-if(tab==='conversion'){
-document.querySelector('.sub-tab[data-land="conversion"]').classList.add('active');
-document.getElementById('landConversion').style.display='block';
-convertUnits();
-}else if(tab==='area'){
-document.querySelector('.sub-tab[data-land="area"]').classList.add('active');
-document.getElementById('landArea').style.display='block';
-}else{
-document.querySelector('.sub-tab[data-land="price"]').classList.add('active');
-document.getElementById('landPrice').style.display='block';
-}
-}
-
-// Survey
+window.convertUnits=function(){const val=parseFloat(document.getElementById('convValue').value)||0;const unit=document.getElementById('convUnit').value;const sqft=val*unitToSqFt[unit];let html='';for(const[u,factor]of Object.entries(unitToSqFt)){const converted=sqft/factor;html+=`<div class="result-item"><span>${unitNames[u]}</span><span style="color:#fff!important;">${converted.toFixed(4)}</span></div>`;}document.getElementById('convResults').innerHTML=html;};
+function switchMainTab(tab){document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));document.querySelectorAll('.panel-content').forEach(p=>p.classList.remove('active'));if(tab==='tracker'){document.querySelector('.tab-btn[data-tab="tracker"]').classList.add('active');document.getElementById('trackerContent').classList.add('active');}else{document.querySelector('.tab-btn[data-tab="land"]').classList.add('active');document.getElementById('landContent').classList.add('active');convertUnits();}}
+function switchLandTab(tab){document.querySelectorAll('.sub-tab').forEach(b=>b.classList.remove('active'));document.getElementById('landConversion').style.display='none';document.getElementById('landArea').style.display='none';document.getElementById('landPrice').style.display='none';if(tab==='conversion'){document.querySelector('.sub-tab[data-land="conversion"]').classList.add('active');document.getElementById('landConversion').style.display='block';convertUnits();}else if(tab==='area'){document.querySelector('.sub-tab[data-land="area"]').classList.add('active');document.getElementById('landArea').style.display='block';}else{document.querySelector('.sub-tab[data-land="price"]').classList.add('active');document.getElementById('landPrice').style.display='block';}}
 function onMapClick(e){if(!surveyActive)return;const{lat,lng}=e.latlng;addSurveyPoint(lat,lng);}
-function addSurveyPoint(lat,lng){
-surveyPoints.push({lat,lng});
-L.marker([lat,lng],{color:'#ffa502'}).addTo(surveyMarkers);
-if(surveyPoints.length>1){if(surveyLine)map.removeLayer(surveyLine);surveyLine=L.polyline(surveyPoints.map(p=>[p.lat,p.lng]),{color:'#ffa502',weight:3}).addTo(map);}
-document.getElementById('surveyPointsList').innerHTML=surveyPoints.map((p,i)=>`পয়েন্ট ${i+1}: ${p.lat.toFixed(5)}, ${p.lng.toFixed(5)}`).join('<br>');
-}
+function addSurveyPoint(lat,lng){surveyPoints.push({lat,lng});L.marker([lat,lng],{color:'#ffa502'}).addTo(surveyMarkers);if(surveyPoints.length>1){if(surveyLine)map.removeLayer(surveyLine);surveyLine=L.polyline(surveyPoints.map(p=>[p.lat,p.lng]),{color:'#ffa502',weight:3}).addTo(map);}document.getElementById('surveyPointsList').innerHTML=surveyPoints.map((p,i)=>`পয়েন্ট ${i+1}: ${p.lat.toFixed(5)}, ${p.lng.toFixed(5)}`).join('<br>');}
 function startSurvey(){if(surveyPoints.length>0)clearSurvey();surveyActive=true;map.on('click',onMapClick);document.getElementById('surveyPointsList').innerHTML='<i>ম্যাপে ট্যাপ করে পয়েন্ট যোগ করুন</i>';}
 function addCurrentLocationPoint(){if(navigator.geolocation)navigator.geolocation.getCurrentPosition(p=>addSurveyPoint(p.coords.latitude,p.coords.longitude),()=>alert('অবস্থান পাওয়া যায়নি'),{enableHighAccuracy:true});}
-function closePolygon(){surveyActive=false;map.off('click',onMapClick);if(surveyPoints.length<3){alert('কমপক্ষে ৩টি পয়েন্ট প্রয়োজন');return;}
-const areaSqM=computeArea(surveyPoints);const sqft=areaSqM*10.7639;const decimal=sqft/435.6;const katha=sqft/720;const bigha=sqft/14400;
-document.getElementById('surveyAreaResult').innerHTML=`📐 <b>ক্ষেত্রফল:</b><br>${decimal.toFixed(4)} শতাংশ | ${katha.toFixed(4)} কাঠা | ${bigha.toFixed(4)} বিঘা<br>${sqft.toFixed(2)} বর্গফুট | ${areaSqM.toFixed(2)} বর্গমিটার`;}
+function closePolygon(){surveyActive=false;map.off('click',onMapClick);if(surveyPoints.length<3){alert('কমপক্ষে ৩টি পয়েন্ট প্রয়োজন');return;}const areaSqM=computeArea(surveyPoints);const sqft=areaSqM*10.7639;const decimal=sqft/435.6;const katha=sqft/720;const bigha=sqft/14400;document.getElementById('surveyAreaResult').innerHTML=`📐 <b>ক্ষেত্রফল:</b><br>${decimal.toFixed(4)} শতাংশ | ${katha.toFixed(4)} কাঠা | ${bigha.toFixed(4)} বিঘা<br>${sqft.toFixed(2)} বর্গফুট | ${areaSqM.toFixed(2)} বর্গমিটার`;}
 function clearSurvey(){surveyActive=false;map.off('click',onMapClick);surveyMarkers.clearLayers();if(surveyLine){map.removeLayer(surveyLine);surveyLine=null;}surveyPoints=[];document.getElementById('surveyPointsList').innerHTML='';document.getElementById('surveyAreaResult').innerHTML='';}
 function computeArea(points){const n=points.length;let area=0;for(let i=0;i<n;i++){const j=(i+1)%n;area+=points[i].lng*points[j].lat;area-=points[j].lng*points[i].lat;}area=Math.abs(area)/2;const latMid=points.reduce((s,p)=>s+p.lat,0)/n;const mPerDeg=111319.9*Math.cos(latMid*Math.PI/180);return area*(111319.9*mPerDeg);}
 function calcTrapezoid(){const a=parseFloat(document.getElementById('trapSideA').value)||0;const b=parseFloat(document.getElementById('trapSideB').value)||0;if(a<=0||b<=0){document.getElementById('trapResult').innerHTML='⚠️ দয়া করে উভয় বাহুর মান দিন';return;}const avg=(a+b)/2;const sqft=avg*avg;const decimal=sqft/435.6;const katha=sqft/720;document.getElementById('trapResult').innerHTML=`📐 আনুমানিক: ${decimal.toFixed(4)} শতাংশ | ${katha.toFixed(4)} কাঠা | ${sqft.toFixed(2)} বর্গফুট`;}
 function calcPrice(){const rate=parseFloat(document.getElementById('priceRate').value)||0;const unit=document.getElementById('priceUnit').value;const totalArea=parseFloat(document.getElementById('totalAreaInput').value)||0;if(rate<=0||totalArea<=0){document.getElementById('priceResult').innerHTML='⚠️ দাম ও পরিমাণ দিন';return;}const totalPrice=rate*totalArea;const totalSqft=totalArea*unitToSqFt[unit];let html=`<b style="color:#fff!important;">মোট মূল্য: ৳ ${totalPrice.toFixed(2)}</b><br><small style="color:#bbb!important;">(${totalArea} ${unitNames[unit]} × ৳ ${rate})</small><br><div style="margin-top:5px;color:#ddd!important;"><b>অন্যান্য এককে আনুমানিক দাম:</b></div>`;for(const[u,factor]of Object.entries(unitToSqFt)){if(u==='sqft'||u==='sqm')continue;const areaInUnit=totalSqft/factor;const ppu=areaInUnit>0?totalPrice/areaInUnit:0;html+=`<div class="result-item"><span>প্রতি ${unitNames[u]}</span><span style="color:#fff!important;">৳ ${ppu.toFixed(2)}</span><button class="copy-btn" onclick="navigator.clipboard.writeText('${ppu.toFixed(2)}')">📋</button></div>`;}document.getElementById('priceResult').innerHTML=html;}
 
-// Event bindings
 document.querySelectorAll('.tab-btn').forEach(b=>b.addEventListener('click',function(){switchMainTab(this.getAttribute('data-tab'));}));
 document.querySelectorAll('.sub-tab').forEach(b=>b.addEventListener('click',function(){switchLandTab(this.getAttribute('data-land'));}));
 document.getElementById('btnStartSurvey').addEventListener('click',startSurvey);
@@ -1289,16 +1209,11 @@ window.startSurvey=startSurvey;window.addCurrentLocationPoint=addCurrentLocation
 window.closePolygon=closePolygon;window.clearSurvey=clearSurvey;
 window.calcTrapezoid=calcTrapezoid;window.calcPrice=calcPrice;
 
-// ──────────────────────────── TIMER & INIT ────────────────────────────
-setInterval(()=>{if(state.tracking&&!state.paused)updateUI();if(state.tracking)timeVal.textContent=formatTime(getElapsed());},500);
-function init(){
-statusDot.style.background='#ff4757';statusDot.style.boxShadow='0 0 6px #ff4757';
-btnPause.disabled=true;btnStop.disabled=true;
-accuracyBadge.textContent=t('ready');accuracyBadge.style.color='#a0a0b8';
-setLanguage('bn');startWatching();updateUI();convertUnits();
-}
+// ────────── TIMER ──────────
+setInterval(()=>{if(state.tracking&&!state.paused)updateUI();if(state.tracking)timeVal.textContent=formatTime(getElapsed());updateGpsIndicator();},500);
+function init(){statusDot.style.background='#ff4757';statusDot.style.boxShadow='0 0 6px #ff4757';btnPause.disabled=true;btnStop.disabled=true;accuracyBadge.textContent=t('ready');accuracyBadge.style.color='#a0a0b8';gpsIndicator.textContent=t('gpsWaiting');gpsIndicator.style.color='#888';setLanguage('bn');startWatching();updateUI();convertUnits();}
 init();
-console.log('✅ ফুটপ্রিন্ট ট্র্যাকার প্রো + জমির হিসাব | সার্চ • লোকেট • শেয়ার');
+console.log('✅ ফুটপ্রিন্ট ট্র্যাকার প্রো + জমির হিসাব | GPS ফিক্সড সংস্করণ');
 })();
 </script>
 </body>
